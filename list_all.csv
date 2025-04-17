@@ -1,0 +1,54 @@
+Fichier_de_donnees;lake;Type;Nom_echantillon_BD;remarque;Nom_dans_fichier_LICOR;date;heure_debut;Temperature;Vliquide;Vgaz;Vinjecte
+23_08_28_list.csv;L17;Flux;F1edge;;5309BCl17_ef1;28/08/2023;09:42:00;;;;
+23_08_28_list.csv;L17;Flux;F2edge;carnet:09:47:18/fichier:09:48:16;5309BCl17_ef2;28/08/2023;09:47:18;;;;
+23_08_28_list.csv;L17;Flux;F3edge;;5309BCl17_ef3;28/08/2023;09:54:17;;;;
+23_08_28_list.csv;L17;Injection;L17WTedge_A;;2309BCl17_ei1;28/08/2023;10:35:42;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WTedge_B;;2309BCl17_ei2;28/08/2023;10:36:59;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WTedge_C;;2309BCl17_ei3;28/08/2023;10:38:10;17.5;90;60;1
+23_08_28_list.csv;L17;Flux;F1middle;;2309BCl17_mf1;28/08/2023;11:39:38;;;;
+23_08_28_list.csv;L17;Flux;F2middle;;2309BCl17_mf2;28/08/2023;11:44:52;;;;
+23_08_28_list.csv;L17;Flux;F3middle;;2309BCl17_mf3;28/08/2023;11:50:49;;;;
+23_08_28_list.csv;L17;Injection;L17WT_A;;Inj_L17_s_1;28/08/2023;13:55:47;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WT_B;;Inj_L17_s_2;28/08/2023;13:59:42;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WT_C;;Inj_L17_s_3;28/08/2023;14:01:49;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_0.5_A;;Inj_L17_0.5_1;28/08/2023;14:04:29;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_0.5_B;;no_name;28/08/2023;14:05:35;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_0.5_C;;Inj_L17_0.5_3;28/08/2023;14:07:18;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_1_A;;Inj_L17_1_1;28/08/2023;14:10:21;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_1_B;;Inj_L17_1_2;28/08/2023;14:12:00;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_1_C;;Inj_L17_1_3;28/08/2023;14:14:10;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_1.5_A;carnet:14:26:05/fichier:14:25:55;Inj_L17_1.5_1;28/08/2023;14:26:05;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_1.5_B;;Inj_L17_1.5_2;28/08/2023;14:27:50;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_1.5_C;;Inj_L17_1.5_3;28/08/2023;14:29:45;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_1.75_A;;Inj_L17_1.75_1;28/08/2023;14:31:49;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_1.75_B;;Inj_L17_1.75_2;28/08/2023;14:33:50;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_1.75_C;;Inj_L17_1.75_3;28/08/2023;14:35:20;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_2_A;;Inj_L17_2_1;28/08/2023;14:37:20;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_2_B;;Inj_L17_2_2;28/08/2023;14:39:30;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_2_C;;Inj_L17_2_3;28/08/2023;14:41:00;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_2.25_A;;Inj_L17_2.25_1;28/08/2023;14:43:00;17.5;90;60;1
+23_08_28_list.csv;L17;Injection;L17WM_2.25_B;;Inj_L17_2.25_2;28/08/2023;14:45:35;17.5;90;60;0.5
+23_08_28_list.csv;L17;Injection;L17WM_2.25_C;error heure carnet 45 au lieu de 47;Inj_L17_2.25_3;28/08/2023;14:47:30;17.5;90;60;0.5
+23_08_28_list.csv;L17;Injection;L17WM_2.5_A;;Inj_L17_2.5_1;28/08/2023;14:49:15;17.5;90;60;0.5
+23_08_28_list.csv;L17;Injection;L17WM_2.5_B;;Inj_L17_2.5_2;28/08/2023;14:51:18;17.5;90;60;0.2
+23_08_28_list.csv;L17;Injection;L17WM_2.5_C;;Inj_L17_2.5_3;28/08/2023;14:53:18;17.5;90;60;0.2
+23_08_28_list.csv;L17;Injection;L17WM_2.75_A;just CH4;Inj_L17_2.75_1;28/08/2023;14:55:15;17.5;90;60;0.2
+23_08_28_list.csv;L17;Injection;L17WM_2.75_B;just CH4;Inj_L17_2.75_2;28/08/2023;14:57:55;17.5;90;60;0.1
+23_08_28_list.csv;L17;Injection;L17WM_2.75_C;just CO2;Inj_L17_2.75_3c;28/08/2023;15:00:20;17.5;90;60;0.5
+23_08_28_list.csv;L17;Injection;L17WM_2.75_D;just CO2;Inj_L17_2.75_4c;28/08/2023;15:02:25;17.5;90;60;0.5
+23_08_28_list.csv;L17;Injection;L17WM_3_A;just CH4;Inj_L17_3_1;28/08/2023;15:04:30;17.5;90;60;0.1
+23_08_28_list.csv;L17;Injection;L17WM_3_B;just CH4;Inj_L17_3_2;28/08/2023;15:08:05;17.5;90;60;0.1
+23_08_28_list.csv;L17;Injection;L17WM_3_C;just CO2;Inj_L17_3_3c;28/08/2023;15:11:25;17.5;90;60;0.5
+23_08_28_list.csv;L17;Injection;L17WM_3_D;just CO2;Inj_L17_3_4c;28/08/2023;15:13:03;17.5;90;60;0.5
+23_08_28_list.csv;L17;Injection;L17WB_3.5_A;just CH4;Inj_L17_3.5_1;28/08/2023;15:17:55;17.5;90;60;0.1
+23_08_28_list.csv;L17;Injection;L17WB_3.5_B;just CH4 (0.2 vol inect;Inj_L17_3.5_2;28/08/2023;15:21:43;17.5;90;60;0.1
+23_08_28_list.csv;L17;Injection;L17WB_3.5_C;just CH4;Inj_L17_3.5_3;28/08/2023;15:26:23;17.5;90;60;0.1
+23_08_28_list.csv;L17;Injection;L17WB_3.5_D;just CO2;Inj_L17_3.5_4c;28/08/2023;15:30:02;17.5;90;60;0.5
+23_08_28_list.csv;L17;Injection;L17WB_3.5_E;just CO2;Inj_L17_3.5_5c;28/08/2023;15:31:30;17.5;90;60;0.5
+23_08_29_list.csv;L18;Flux;L18F1edge;;L18_ef1;29/08/2023;10:40:38;;;;
+23_08_29_list.csv;L18;Flux;L18F2edge;;L18_ef2;29/08/2023;10:48:17;;;;
+23_08_29_list.csv;L18;Flux;L18F3edge;;L18_ef3;29/08/2023;10:55:11;;;;
+23_08_29_list.csv;L18;Flux;L18F2middle;;L18_cf2;29/08/2023;13:15:34;;;;
+23_08_29_list.csv;L18;Flux;L18F3middle;;L18_cf3;29/08/2023;13:20:56;;;;
+;;;;;;;;;;;
+;;;;;;;;;;;
