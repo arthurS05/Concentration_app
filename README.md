@@ -79,65 +79,67 @@ Concentration_app/
 
 ## 📐 Methodology
 
-All concentrations are computed via a headspace injection method into a LI-COR analyzer (Li-7810 Trace Gas Analyzer, open-loop). Below are the key equations:
+All concentrations are computed using a headspace injection method into a LI‑COR analyzer (Li‑7810 Trace Gas Analyzer, open‑loop).
 
-## 1. Headspace Preparation
-1. Fill a 150 mL vial completely with water.
-2. Remove 60 mL of water and simultaneously replace it with 60 mL of air.
-3. Shake the vial for 3 minutes.
-4. Inject ~1 mL of headspace gas into the LI-COR.
+---
 
-## 2. Gas‑phase Concentration
+## 2. Gas-phase Concentration
 
-\`\`\`latex
-\\[
-C_g = \\frac{\\bigl(I \\times Q / V_{\\text{inject}}\\bigr) + C_{\\text{base}}}
-           {1000 \\times C_{\\text{conv}} \\times V_{\\text{ig}}}
-\\]
-\`\`\`
+The gas-phase methane concentration \(C_g\) (in mol·L⁻¹) is calculated as:
+
+\[
+C_g = \frac{\bigl(I \times Q / V_{\mathrm{inject}}\bigr) + C_{\mathrm{base}}}
+          {1000 \times C_{\mathrm{conv}} \times V_{\mathrm{ig}}}
+\]
 
 where:
-- \(I\) = integrated CH\(_4\) peak area (ppb·s)  
-- \(Q\) = analyzer flow rate (mL·s\(^{-1}\))  
-- \(V_{\text{inject}}\) = injected gas volume (mL)  
-- \(C_{\text{base}}\) = reference‑air concentration (ppb)  
-- \(C_{\text{conv}}\) = conversion factor (10\(^9\) to convert ppb to mol fraction)  
-- \(V_{\text{ig}}\) = molar volume (23 L·mol\(^{-1}\))  
+
+- \(I\) = integrated CH₄ peak area (ppb·s)  
+- \(Q\) = analyzer flow rate (mL·s⁻¹)  
+- \(V_{\mathrm{inject}}\) = injected gas volume (mL)  
+- \(C_{\mathrm{base}}\) = reference‑air methane concentration (ppb)  
+- \(C_{\mathrm{conv}}\) = conversion factor (10⁹ to convert ppb to mol fraction)  
+- \(V_{\mathrm{ig}}\) = molar volume of an ideal gas (23 L·mol⁻¹)  
+
+---
 
 ## 3. Henry’s Law Constant
 
-\`\`\`latex
-\\[
-H = \\frac{1}
-           {P \\times R \\times T \\times K_{\\mathrm{methane}}
-            \\times \\exp\\Bigl[\\beta_{\\mathrm{methane}}
-            \\bigl(\\tfrac{1}{T} - \\tfrac{1}{T_{\\text{std}}}\\bigr)\\Bigr]}
-\\]
-\`\`\`
+Henry’s law constant \(H\) (in mol·L⁻¹·atm⁻¹) for methane is given by:
+
+\[
+H = \frac{1}{P \; R \; T \; K_{\mathrm{methane}}}
+    \times \exp\Bigl[\beta_{\mathrm{methane}} 
+    \Bigl(\frac{1}{T} - \frac{1}{T_{\mathrm{std}}}\Bigr)\Bigr]
+\]
 
 where:
+
 - \(P = 1.013\) bar (atmospheric pressure)  
-- \(R = 0.082\) L·atm·mol\(^{-1}\)·K\(^{-1}\)  
+- \(R = 0.082\) L·atm·mol⁻¹·K⁻¹ (ideal gas constant)  
 - \(T\) = water temperature (K)  
-- \(T_{\text{std}} = 298.15\) K  
-- \(\beta_{\mathrm{methane}} = 1700\) K  
-- \(K_{\mathrm{methane}} = 0.0014\) mol·(kg·bar)\(^{-1}\)  
+- \(T_{\mathrm{std}} = 298.15\) K (standard temperature)  
+- \(eta_{\mathrm{methane}} = 1700\) K (temperature adjustment factor)  
+- \(K_{\mathrm{methane}} = 0.0014\) mol·(kg·bar)⁻¹ (Henry’s constant at 298.15 K)  
 
-## 4. Liquid‑phase Concentration
+---
 
-\`\`\`latex
-\\[
-C_l = \\frac{C_g \\times V_g + \\bigl(\\tfrac{C_g}{H} \\times V_l\\bigr)}{V_l}
-\\]
-\`\`\`
+## 4. Liquid-phase Concentration
+
+The dissolved methane concentration \(C_l\) (in mol·L⁻¹) is then:
+
+\[
+C_l = \frac{C_g \; V_g \;+\; \bigl(\frac{C_g}{H}\bigr) \; V_l}{V_l}
+\]
 
 where:
-- \(C_l\) = CH\(_4\) concentration in liquid (mol·L\(^{-1}\))  
-- \(C_g\) = gas‑phase CH\(_4\) concentration (mol·L\(^{-1}\))  
-- \(V_g = 60\) mL (gas volume)  
-- \(V_l = 90\) mL (liquid volume)  
-- \(H\) = Henry’s constant (mol·L\(^{-1}\)·atm\(^{-1}\))  
-"""
+
+- \(C_l\) = dissolved CH₄ concentration in liquid (mol·L⁻¹)  
+- \(C_g\) = gas-phase CH₄ concentration (mol·L⁻¹)  
+- \(V_g = 60\) mL (gas‑phase volume)  
+- \(V_l = 90\) mL (liquid‑phase volume)  
+- \(H\) = Henry’s law constant (mol·L⁻¹·atm⁻¹)  
+
 
 ## 🔍 Citation
 
