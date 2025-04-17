@@ -8,7 +8,7 @@ library(DT)
 data_dir <- "path_to_your_data_directory"
 
 df_data_init <- read.csv(file.path(data_dir, "all_data.csv"), header = TRUE, sep = ";")
-list_all     <- read.csv(file.path(data_dir, "list_all.csv"), header = TRUE, sep = ";")
+list_df0     <- read.csv(file.path(data_dir, "list_all.csv"), header = TRUE, sep = ";")
 list_df0      <- list_df0[list_df0$Type == 'Injection', ]
 list_df       <- list_df0
 
