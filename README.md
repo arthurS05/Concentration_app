@@ -2,7 +2,7 @@
 
 
 **A Shiny dashboard for processing LI‑COR headspace injection data**  
-This R Shiny application streamlines the batch processing of dissolved methane (CH₄) and carbon dioxide (CO₂) measurements obtained via a headspace injection method into a LI‑COR trace gas analyzer. Users can step through samples, pick start/end points on interactive plots, inspect summary statistics, add free‑text comments, and collate all results into a single table for export.
+This R Shiny application streamlines the batch processing of dissolved methane (CH₄) and carbon dioxide (CO₂) concentration measurements obtained via a headspace injection method into a LI‑COR trace gas analyzer. Users can step through samples, pick start/end points on interactive plots, inspect summary statistics, add free‑text comments, and collate all results into a single table for export.
 
 ---
 
