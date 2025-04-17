@@ -76,62 +76,98 @@ Concentration_app/
 
 All concentrations are computed using a headspace injection method into a LI‑COR analyzer (Li‑7810 Trace Gas Analyzer, open‑loop).
 
----
+## 1. list_all.csv
 
-## 2. Gas-phase Concentration
+  This file holds your sample metadata. It must include the following columns:
 
-The gas-phase methane concentration `C_g` (in mol·L⁻¹) is calculated as:
+  | Column                | Description                                         |
+  |-----------------------|-----------------------------------------------------|
+  | `Fichier_de_donnees`  | Raw data filename                                   |
+  | `lake`                | Lake name                                           |
+  | `Type`                | Sample type (e.g. “Injection” or "Flux")            |
+  | `Nom_echantillon_BD`  | Your internal sample ID                             |
+  | `remarque`            | Any user remark                                     |
+  | `Nom_dans_fichier_LICOR` | Sample ID as used in the LI‑COR output filename |
+  | `date`                | Sampling date (DD/MM/YYYY)                          |
+  | `heure_debut`         | Start time (HH:MM:SS)                               |
+  | `Temperature`         | Water temperature (°C)                              |
+  | `Vliquide`            | Liquid phase volume in vial (mL)                    |
+  | `Vgaz`                | Gas phase (headspace) volume in vial (mL)           |
+  | `Vinjecte`            | Injected gas volume into analyzer (mL)              |
+
+## 2. Gas‑phase Concentration
+
+For each injection the gas‑phase concentration \(C_g\) (mol·L⁻¹) is calculated as:
 
 ```
 C_g = [ (I × Q / V_inject) + C_base ] / [1000 × C_conv × V_ig]
 ```
 
-**Where:**
+**Where (CH₄):**
 
 - `I` = integrated CH₄ peak area (ppb·s)  
 - `Q` = analyzer flow rate (mL·s⁻¹)  
 - `V_inject` = injected gas volume (mL)  
 - `C_base` = reference‑air methane concentration (ppb)  
-- `C_conv` = conversion factor (10⁹ to convert ppb to mol fraction)  
-- `V_ig` = molar volume of an ideal gas (23 L·mol⁻¹)  
+- `C_conv` = 10⁹ (ppb → mol fraction)  
+- `V_ig` = 23 L·mol⁻¹ (molar volume of ideal gas)  
+
+**Where (CO₂):**
+
+- `I` = integrated CO₂ peak area (ppm·s)  
+- `Q` = analyzer flow rate (mL·s⁻¹)  
+- `V_inject` = injected gas volume (mL)  
+- `C_base` = reference‑air CO₂ concentration (ppm)  
+- `C_conv` = 10⁶ (ppm → mol fraction)  
+- `V_ig` = 23 L·mol⁻¹ (molar volume of ideal gas)  
 
 ---
 
 ## 3. Henry’s Law Constant
 
-Henry’s law constant `H` (in mol·L⁻¹·atm⁻¹) for methane is given by:
+Henry’s law constant \(H\) (mol·L⁻¹·atm⁻¹) is computed as:
 
 ```
 H = [1 / (P × R × T × K_methane)] × exp[ β_methane × (1/T - 1/T_std) ]
 ```
+**For CH₄:**
 
-**Where:**
-
-- `P` = 1.013 bar (atmospheric pressure)  
-- `R` = 0.082 L·atm·mol⁻¹·K⁻¹ (ideal gas constant)  
+- `P` = 1.013 bar  
+- `R` = 0.082 L·atm·mol⁻¹·K⁻¹  
 - `T` = water temperature (K)  
-- `T_std` = 298.15 K (standard temperature)  
-- `β_methane` = 1700 K (temperature adjustment factor)  
-- `K_methane` = 0.0014 mol·(kg·bar)⁻¹ (Henry’s constant at 298.15 K)  
+- `T_std` = 298.15 K  
+- `β_methane` = 1700 K  
+- `K_methane` = 0.0014 mol·(kg·bar)⁻¹  
+
+**For CO₂:**
+
+- `P` = 1.013 bar  
+- `R` = 0.082 L·atm·mol⁻¹·K⁻¹  
+- `T` = water temperature (K)  
+- `T_std` = 298.15 K  
+- `β_CO₂` = 2400 K  
+- `K_CO₂` = 0.034 mol·(kg·bar)⁻¹  
 
 ---
 
-## 4. Liquid-phase Concentration
+## 4. Liquid‑phase Concentration
 
-The dissolved methane concentration `C_l` (in mol·L⁻¹) is:
+The dissolved concentration \(C_l\) (mol·L⁻¹) is then:
 
 ```
-C_l = [(C_g × V_g) + ((C_g / H) × V_l)] / V_l
+C_l = [C_g × V_g + (C_g / H) × V_l] / V_l
 ```
 
 **Where:**
 
-- `C_l` = dissolved CH₄ concentration in liquid (mol·L⁻¹)  
-- `C_g` = gas-phase CH₄ concentration (mol·L⁻¹)  
-- `V_g` = 60 mL (gas-phase volume)  
-- `V_l` = 90 mL (liquid-phase volume)  
-- `H` = Henry’s law constant (mol·L⁻¹·atm⁻¹)
+- `C_g` = gas‑phase concentration (mol·L⁻¹)  
+- `V_g` = 60 mL (headspace gas volume)  
+- `V_l` = 90 mL (liquid volume)  
+- `H`   = Henry’s law constant (mol·L⁻¹·atm⁻¹)  
 
+*(Apply the same form for both CH₄ and CO₂ using their respective \(C_g\), \(H\), and conversion parameters.)*
+
+---
 
 ## 🔍 Citation
 
