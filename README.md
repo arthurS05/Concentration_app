@@ -55,11 +55,6 @@ Concentration_app/
 ## ▶️ Usage
 
 1. **Set your data directory** in **app.R**:
-   ```r
-   # at top of app.R
-   library(here)
-   data_dir <- here("data")
-   ```
 
 2. Launch the app (from R):
    ```r
