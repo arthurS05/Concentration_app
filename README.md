@@ -79,44 +79,65 @@ Concentration_app/
 
 ## 📐 Methodology
 
-All concentrations are computed via a headspace injection method into a LI‑COR analyzer (Li‑7810 Trace Gas Analyzer, open‑loop).
+All concentrations are computed via a headspace injection method into a LI-COR analyzer (Li-7810 Trace Gas Analyzer, open-loop). Below are the key equations:
 
-1. **Headspace preparation**  
-   A 150 mL vial is filled with water. 60 mL of water are replaced by 60 mL of air. The vial is shaken for 3 min, then ~1 mL of headspace is injected into the LI‑COR.
+## 1. Headspace Preparation
+1. Fill a 150 mL vial completely with water.
+2. Remove 60 mL of water and simultaneously replace it with 60 mL of air.
+3. Shake the vial for 3 minutes.
+4. Inject ~1 mL of headspace gas into the LI-COR.
 
-2. **Gas‑phase concentration**  
-   \[
-     C_g
-     = \frac{\bigl(I \times Q / V_{\text{inject}}\bigr) + C_{\text{base}}}
-            {1000 \times C_{\text{conv}} \times V_{\text{ig}}},
-   \]
-   where  
-   - $I$ = integrated CH$_4$ peak (ppb·s)  
-   - $Q$ = analyzer flow (mL·s$^{-1}$)  
-   - $V_{\text{inject}}$ = injected gas volume (mL)  
-   - $C_{\text{base}}$ = reference‑air concentration (ppb)  
-   - $C_{\text{conv}}$ = ppb→molar fraction conversion (10$^9$ for CH₄)  
-   - $V_{\text{ig}}$ = molar volume (23 L·mol$^{-1}$)  
+## 2. Gas‑phase Concentration
 
-3. **Henry’s law constant**  
-   \[
-     H
-     = \frac{1}{P \times R \times T \times K_{\text{methane}}
-       \times e^{\beta_{\text{methane}}\bigl(\frac{1}{T} - \frac{1}{T_{\text{std}}}\bigr)}},
-   \]
-   with  
-   - $P=1.013$ bar, $R=0.082$ L·atm·mol$^{-1}$·K$^{-1}$  
-   - $T$ = water temperature (K), $T_{	ext{std}}=298.15$ K  
-   - $eta_{	ext{methane}}=1700$ K, $K_{	ext{methane}}=0.0014$ mol·(kg bar)$^{-1}$  
+\`\`\`latex
+\\[
+C_g = \\frac{\\bigl(I \\times Q / V_{\\text{inject}}\\bigr) + C_{\\text{base}}}
+           {1000 \\times C_{\\text{conv}} \\times V_{\\text{ig}}}
+\\]
+\`\`\`
 
-4. **Liquid‑phase concentration**  
-   \[
-     C_l
-     = \frac{C_g \times V_g \;+\;\frac{C_g}{H}\times V_l}{V_l},
-   \]
-   where $V_g=60$ mL, $V_l=90$ mL.
+where:
+- \(I\) = integrated CH\(_4\) peak area (ppb·s)  
+- \(Q\) = analyzer flow rate (mL·s\(^{-1}\))  
+- \(V_{\text{inject}}\) = injected gas volume (mL)  
+- \(C_{\text{base}}\) = reference‑air concentration (ppb)  
+- \(C_{\text{conv}}\) = conversion factor (10\(^9\) to convert ppb to mol fraction)  
+- \(V_{\text{ig}}\) = molar volume (23 L·mol\(^{-1}\))  
 
----
+## 3. Henry’s Law Constant
+
+\`\`\`latex
+\\[
+H = \\frac{1}
+           {P \\times R \\times T \\times K_{\\mathrm{methane}}
+            \\times \\exp\\Bigl[\\beta_{\\mathrm{methane}}
+            \\bigl(\\tfrac{1}{T} - \\tfrac{1}{T_{\\text{std}}}\\bigr)\\Bigr]}
+\\]
+\`\`\`
+
+where:
+- \(P = 1.013\) bar (atmospheric pressure)  
+- \(R = 0.082\) L·atm·mol\(^{-1}\)·K\(^{-1}\)  
+- \(T\) = water temperature (K)  
+- \(T_{\text{std}} = 298.15\) K  
+- \(\beta_{\mathrm{methane}} = 1700\) K  
+- \(K_{\mathrm{methane}} = 0.0014\) mol·(kg·bar)\(^{-1}\)  
+
+## 4. Liquid‑phase Concentration
+
+\`\`\`latex
+\\[
+C_l = \\frac{C_g \\times V_g + \\bigl(\\tfrac{C_g}{H} \\times V_l\\bigr)}{V_l}
+\\]
+\`\`\`
+
+where:
+- \(C_l\) = CH\(_4\) concentration in liquid (mol·L\(^{-1}\))  
+- \(C_g\) = gas‑phase CH\(_4\) concentration (mol·L\(^{-1}\))  
+- \(V_g = 60\) mL (gas volume)  
+- \(V_l = 90\) mL (liquid volume)  
+- \(H\) = Henry’s constant (mol·L\(^{-1}\)·atm\(^{-1}\))  
+"""
 
 ## 🔍 Citation
 
