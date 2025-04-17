@@ -85,71 +85,64 @@ All concentrations are computed using a headspace injection method into a LI‑C
 
 ## 2. Gas-phase Concentration
 
-The gas-phase methane concentration \(C_g\) (in mol·L⁻¹) is calculated as:
+The gas-phase methane concentration `C_g` (in mol·L⁻¹) is calculated as:
 
-\[
-C_g = \frac{\bigl(I \times Q / V_{\mathrm{inject}}\bigr) + C_{\mathrm{base}}}
-          {1000 \times C_{\mathrm{conv}} \times V_{\mathrm{ig}}}
-\]
+```
+C_g = [ (I × Q / V_inject) + C_base ] / [1000 × C_conv × V_ig]
+```
 
-where:
+**Where:**
 
-- \(I\) = integrated CH₄ peak area (ppb·s)  
-- \(Q\) = analyzer flow rate (mL·s⁻¹)  
-- \(V_{\mathrm{inject}}\) = injected gas volume (mL)  
-- \(C_{\mathrm{base}}\) = reference‑air methane concentration (ppb)  
-- \(C_{\mathrm{conv}}\) = conversion factor (10⁹ to convert ppb to mol fraction)  
-- \(V_{\mathrm{ig}}\) = molar volume of an ideal gas (23 L·mol⁻¹)  
+- `I` = integrated CH₄ peak area (ppb·s)  
+- `Q` = analyzer flow rate (mL·s⁻¹)  
+- `V_inject` = injected gas volume (mL)  
+- `C_base` = reference‑air methane concentration (ppb)  
+- `C_conv` = conversion factor (10⁹ to convert ppb to mol fraction)  
+- `V_ig` = molar volume of an ideal gas (23 L·mol⁻¹)  
 
 ---
 
 ## 3. Henry’s Law Constant
 
-Henry’s law constant \(H\) (in mol·L⁻¹·atm⁻¹) for methane is given by:
+Henry’s law constant `H` (in mol·L⁻¹·atm⁻¹) for methane is given by:
 
-\[
-H = \frac{1}{P \; R \; T \; K_{\mathrm{methane}}}
-    \times \exp\Bigl[\beta_{\mathrm{methane}} 
-    \Bigl(\frac{1}{T} - \frac{1}{T_{\mathrm{std}}}\Bigr)\Bigr]
-\]
+```
+H = [1 / (P × R × T × K_methane)] × exp[ β_methane × (1/T - 1/T_std) ]
+```
 
-where:
+**Where:**
 
-- \(P = 1.013\) bar (atmospheric pressure)  
-- \(R = 0.082\) L·atm·mol⁻¹·K⁻¹ (ideal gas constant)  
-- \(T\) = water temperature (K)  
-- \(T_{\mathrm{std}} = 298.15\) K (standard temperature)  
-- \(eta_{\mathrm{methane}} = 1700\) K (temperature adjustment factor)  
-- \(K_{\mathrm{methane}} = 0.0014\) mol·(kg·bar)⁻¹ (Henry’s constant at 298.15 K)  
+- `P` = 1.013 bar (atmospheric pressure)  
+- `R` = 0.082 L·atm·mol⁻¹·K⁻¹ (ideal gas constant)  
+- `T` = water temperature (K)  
+- `T_std` = 298.15 K (standard temperature)  
+- `β_methane` = 1700 K (temperature adjustment factor)  
+- `K_methane` = 0.0014 mol·(kg·bar)⁻¹ (Henry’s constant at 298.15 K)  
 
 ---
 
 ## 4. Liquid-phase Concentration
 
-The dissolved methane concentration \(C_l\) (in mol·L⁻¹) is then:
+The dissolved methane concentration `C_l` (in mol·L⁻¹) is:
 
-\[
-C_l = \frac{C_g \; V_g \;+\; \bigl(\frac{C_g}{H}\bigr) \; V_l}{V_l}
-\]
+```
+C_l = [(C_g × V_g) + ((C_g / H) × V_l)] / V_l
+```
 
-where:
+**Where:**
 
-- \(C_l\) = dissolved CH₄ concentration in liquid (mol·L⁻¹)  
-- \(C_g\) = gas-phase CH₄ concentration (mol·L⁻¹)  
-- \(V_g = 60\) mL (gas‑phase volume)  
-- \(V_l = 90\) mL (liquid‑phase volume)  
-- \(H\) = Henry’s law constant (mol·L⁻¹·atm⁻¹)  
+- `C_l` = dissolved CH₄ concentration in liquid (mol·L⁻¹)  
+- `C_g` = gas-phase CH₄ concentration (mol·L⁻¹)  
+- `V_g` = 60 mL (gas-phase volume)  
+- `V_l` = 90 mL (liquid-phase volume)  
+- `H` = Henry’s law constant (mol·L⁻¹·atm⁻¹)
 
 
 ## 🔍 Citation
 
 If you use this tool in a publication, please cite:
 
-> *Your Lab’s Name* (2023), *Concentration_app*: R Shiny dashboard for LI‑COR headspace processing. GitHub repository: https://github.com/yourusername/Concentration_app
 
----
 
-## 📝 License
 
-This project is released under the **MIT License** – see [LICENSE](LICENSE) for details.
 
